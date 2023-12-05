@@ -4,7 +4,7 @@
     $books = Books::fetchAll();
 ?>
 <div class="container">
-    <h1>Books</h1>
+    <h1 class="text-white">Books</h1>
     <div class="row">
         <?php
             foreach ($books as $book) {

@@ -4,7 +4,7 @@
     $games = Games::fetchAll();
 ?>
 <div class="container">
-    <h1>Games List</h1>
+    <h1 class="text-white">Games List</h1>
     <div class="row">
         <?php
             foreach ($games as $game) {

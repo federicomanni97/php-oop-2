@@ -10,14 +10,25 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <div class="container">
+    <header class="">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light rounded-2 m-3">
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav fs-4">
+                <a class="nav-link" aria-current="page" href="index.php">Movie</a>
+                <a class="nav-link" href="gamesPrint.php">Games</a>
+                <a class="nav-link" href="booksprint.php">Books</a>
+            </div>
+            </div>
+        </div>
+    </nav>
+        <!-- <div class="container">
             <h1 class="text-light py-3">Shop</h1>
             <ul class="d-flex list-unstyled">
                 <li class="p-1"><a href="index.php">Movie</a></li>
                 <li class="p-1"><a href="gamesPrint.php">Games</a></li>
                 <li class="p-1"><a href="booksPrint.php">Books</a></li>
             </ul>
-        </div>
+        </div> -->
     </header>
     <main>
