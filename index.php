@@ -8,11 +8,6 @@
         <?php
         foreach ($movies as $movie) {
             $movie->movieCards();
-            // $movie -> sconto = 20;
-            // if ($movie-> title == 'Gunfight at Rio Bravo') {
-            //     $movie -> sconto = 20;
-            // }
-            // echo $movie->sconto;
         }
         ?>
     </div>

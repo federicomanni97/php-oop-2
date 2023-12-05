@@ -15,6 +15,7 @@
             <h1>Shop</h1>
             <ul>
                 <li><a href="index.php">Movie</a></li>
+                <li><a href="gamesPrint.php">Games</a></li>
             </ul>
         </div>
     </header>
