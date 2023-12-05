@@ -16,6 +16,7 @@
             <ul>
                 <li><a href="index.php">Movie</a></li>
                 <li><a href="gamesPrint.php">Games</a></li>
+                <li><a href="booksPrint.php">Books</a></li>
             </ul>
         </div>
     </header>
