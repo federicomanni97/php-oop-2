@@ -8,10 +8,19 @@
             <p class="card-text ">
                 <?= $overview ?>
             </p>
-            <div class="d-flex justify-content-between align-items-flex-start">
+            <p>
                 <?= $vote ?>
+            </p>  
+            <div class="g-1">
+                <?= $genre ?>
+            </div>
+            <div class="d-flex justify-content-between align-items-flex-start">
                 <div>
-                    <?= $genre ?>
+                    <?= $price ?>
+                </div>
+                <div>
+                    <span>In Stock:</span>
+                    <?= $quantity ?>
                 </div>
             </div>
             <div>

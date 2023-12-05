@@ -12,8 +12,9 @@ class Movie extends Product
     private string $original_language;
     public array $genre;
 
-    function __construct($id, $title, $overview, $vote, $language, $postermovie, $genre)
+    function __construct($id, $title, $overview, $vote, $language, $postermovie, $genre, $price, $quantity)
     {
+        parent::__construct($price, $quantity);
         $this->id = $id;
         $this->original_title = $title;
         $this->overview = $overview;
@@ -40,6 +41,8 @@ class Movie extends Product
         $overview = $this -> overview;
         $vote = $this -> starsVote();
         $genre = $this -> formatGenres();
+        $price = $this -> price;
+        $quantity = $this -> quantity;
         include __DIR__ . '/../Views/card.php';
     }
 
@@ -60,7 +63,9 @@ class Movie extends Product
         $genres = Genre::fetchAll();
         $movies = [];
         foreach ($movieList as $item) {
-        $movies[] = new Movie($item ['id'], $item['original_title'], $item['overview'], $item['vote_average'], $item['original_language'], $item['poster_path'], $genres,);
+        $price = rand(10, 100);
+        $quantity = rand(1, 50);
+        $movies[] = new Movie($item ['id'], $item['original_title'], $item['overview'], $item['vote_average'], $item['original_language'], $item['poster_path'], $genres, $price, $quantity);
         }
         return $movies;
         // var_dump($movies);

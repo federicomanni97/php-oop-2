@@ -1,5 +1,7 @@
 <?php
-class Books
+include __DIR__ . '/Product.php';
+
+class Books extends Product
 {
     private int $id;
     private string $title;
@@ -8,8 +10,9 @@ class Books
     private string $status; 
     private array $authors;
     private array $category; 
-    function __construct($id, $title, $image, $longDescription, $status, $authors, $categories)
+    function __construct($id, $title, $image, $longDescription, $status, $authors, $categories, $price, $quantity)
     {
+        parent::__construct($price, $quantity);
         $this->id = $id;
         $this->title = $title;
         $this->image = $image;
@@ -25,6 +28,8 @@ class Books
         $overview = $this->longDescription;
         $vote = $this->formatAuthors();
         $genre = $this->formatCategory();
+        $price = $this -> price;
+        $quantity = $this -> quantity;
         include __DIR__ . '/../Views/card.php';
     }
     private function formatAuthors()
@@ -51,7 +56,9 @@ class Books
         $bookList = json_decode($bookString, True);
         $books = [];
         foreach ($bookList as $item) {
-        $books[] = new Books($item ['_id'],$item['title'], $item['thumbnailUrl'],$item['longDescription'],$item ['status'],$item ['authors'],$item ['categories']);
+        $price = rand(10, 100);
+        $quantity = rand(1, 50);
+        $books[] = new Books($item ['_id'],$item['title'], $item['thumbnailUrl'],$item['longDescription'],$item ['status'],$item ['authors'],$item ['categories'], $price, $quantity);        
         }
         return $books;
         // var_dump($movies);

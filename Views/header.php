@@ -12,11 +12,11 @@
 <body>
     <header>
         <div class="container">
-            <h1>Shop</h1>
-            <ul>
-                <li><a href="index.php">Movie</a></li>
-                <li><a href="gamesPrint.php">Games</a></li>
-                <li><a href="booksPrint.php">Books</a></li>
+            <h1 class="text-light py-3">Shop</h1>
+            <ul class="d-flex list-unstyled">
+                <li class="p-1"><a href="index.php">Movie</a></li>
+                <li class="p-1"><a href="gamesPrint.php">Games</a></li>
+                <li class="p-1"><a href="booksPrint.php">Books</a></li>
             </ul>
         </div>
     </header>
