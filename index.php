@@ -8,7 +8,8 @@
     <div class="row">
         <?php
         foreach ($movies as $movie) {
-            $movie->movieCards();
+            // $movie->movieCards();
+            $movie->printCard($movie->formatCards());
         }
         ?>
     </div>

@@ -1,6 +1,7 @@
 <?php
 include __DIR__ . '/genre.php';
 include __DIR__ . '/Product.php';
+// include __DIR__ . '/../Traits/DrawCard.php';
 
 class Movie extends Product
 {
@@ -34,16 +35,27 @@ class Movie extends Product
         $template .= '</p>';
         return $template;
     }
-    public function movieCards()
+    public function formatCards()
     {
-        $poster_path = $this-> poster_path;
-        $title = $this->original_title;
-        $overview = $this -> overview;
-        $vote = $this -> starsVote();
-        $genre = $this -> formatGenres();
-        $price = $this -> price;
-        $quantity = $this -> quantity;
-        include __DIR__ . '/../Views/card.php';
+        $cardItem = [
+            'poster_path' => $this->poster_path,
+            'title' => $this->original_title,
+            'overview'=> $this -> overview,
+            'vote' => $this -> starsVote(),
+            'genre' => $this -> formatGenres(),
+            'price' => $this -> price,
+            'quantity' => $this -> quantity,
+            // include __DIR__ . '/../Views/card.php';
+        ];
+        return $cardItem;
+        // $poster_path = $this-> poster_path;
+        // $title = $this->original_title;
+        // $overview = $this -> overview;
+        // $vote = $this -> starsVote();
+        // $genre = $this -> formatGenres();
+        // $price = $this -> price;
+        // $quantity = $this -> quantity;
+        // include __DIR__ . '/../Views/card.php';
     }
 
     private function formatGenres()
