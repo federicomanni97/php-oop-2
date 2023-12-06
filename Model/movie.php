@@ -43,7 +43,7 @@ class Movie extends Product
             'overview'=> $this -> overview,
             'vote' => $this -> starsVote(),
             'genre' => $this -> formatGenres(),
-            'price' => $this -> price,
+            'price' => $this -> salesPrice($price),
             'quantity' => $this -> quantity,
             // include __DIR__ . '/../Views/card.php';
         ];
@@ -100,4 +100,4 @@ class Movie extends Product
 
 // $quantity = rand(0,100);
 // $price= rand(5, 200);
-// ?>
+?>
