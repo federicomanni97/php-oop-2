@@ -14,7 +14,7 @@ class Product
 
     public function salesPrice($price)
     {
-        if ($price > 20) {
+        if ($price > 70) {
             throw new Exception('Error');
         } else {
             $this-> price = $price;
