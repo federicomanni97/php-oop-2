@@ -2,6 +2,11 @@
     <div class="card">
         <img src="<?= $poster_path ?>" class="card-img-top my-ratio" alt="<?= $title ?>">
         <div class="card-body">
+            <?php
+            if (isset($error) && $error) { ?>
+                <div class="alert alert-danger"><?= $error ?></div>
+            <?php }
+            ?>
             <h5 class="card-title">
                 <?= $title ?>
             </h5>
@@ -10,7 +15,7 @@
             </p>
             <p>
                 <?= $vote ?>
-            </p>  
+            </p>
             <div class="g-1">
                 <?= $genre ?>
             </div>

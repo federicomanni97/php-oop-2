@@ -12,19 +12,16 @@ class Product
         $this->quantity = $quantity;
     }
 
-
-
     public function salesPrice($price)
     {
-        try {
-            if ($price > 70) {
-                throw new Exception('Error');
-            } else {
-                $price / 2;
-                return $this->price;
-            }
-        } catch (Exception $e) {
-            $error = 'Eccezione: ' . $e->getMessage();
+        if ($price > 20) {
+            throw new Exception('Error');
+        } else {
+            $this-> price = $price;
         }
+    }
+    public function returnSale()
+    {
+        return $this->price;
     }
 }
