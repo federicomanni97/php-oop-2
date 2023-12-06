@@ -14,6 +14,9 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light rounded-2 m-3">
         <div class="container-fluid">
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="">
+                    <img class="w-25" src="https://hiringplatform.boolean.careers/images/logo.png" alt="">
+                </div>
             <div class="navbar-nav fs-4">
                 <a class="nav-link" aria-current="page" href="index.php">Movie</a>
                 <a class="nav-link" href="gamesPrint.php">Games</a>

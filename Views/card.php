@@ -16,6 +16,7 @@
             </div>
             <div class="d-flex justify-content-between align-items-flex-start">
                 <div>
+                    <span>&euro; </span>
                     <?= $price ?>
                 </div>
                 <div>
